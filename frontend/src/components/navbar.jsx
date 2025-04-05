@@ -11,8 +11,8 @@ function Navbar() {
   
     return (
        
-        <div className="min-h-screen bg-gray-100 ">
-          {/* Navbar */}
+<div className="min-h-[20px] bg-gray-100">
+{/* Navbar */}
           <div className="navbar ">
           <div className="navbar bg-base-100 shadow-sm">
     <div className="flex-1" onClick={() => navigate('/')}>
