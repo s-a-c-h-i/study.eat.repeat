@@ -1,8 +1,9 @@
 import React from 'react'
-
+import { SignedIn } from '@clerk/clerk-react'
 const Home = () => {
   return (
 <>
+
 <div className="grid grid-cols-3 gap-4 p-8">
             {/* Left Side - Classes, Projects, Assignments */}
             <div className="col-span-1 space-y-4">
@@ -46,7 +47,7 @@ const Home = () => {
             </form>
           </div>
 
-
+          
 </>  )
 }
 

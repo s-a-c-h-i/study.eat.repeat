@@ -17,10 +17,8 @@ createRoot(document.getElementById('root')).render(
   <StrictMode>
    
     <ClerkProvider publishableKey={PUBLISHABLE_KEY}>
-      <Routes>
-        <Route path="/" element={<App />} />
-      </Routes>
+       <App/>
     </ClerkProvider>
   
 </StrictMode>,
-)
+) 

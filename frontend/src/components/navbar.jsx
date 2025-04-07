@@ -4,11 +4,13 @@ import { PiHamburgerBold } from "react-icons/pi";
 import { CiTimer } from "react-icons/ci";
 import { FaTrophy } from "react-icons/fa";
 import { useNavigate } from 'react-router-dom';
+  
+ 
 
-
+//  navigate('/login');
 function Navbar() {
     const navigate = useNavigate();
-  
+      
     return (
        
 <div className="min-h-[20px] bg-gray-100">
@@ -26,25 +28,25 @@ function Navbar() {
           </div>
           
         </div>
-        <div tabIndex={0} role="button" className="btn btn-ghost btn-circle">
+        <div tabIndex={0} role="button" className="btn btn-ghost btn-circle" onClick={()=>{navigate("/courses")}}>
           <div className="indicator">
           <FaBook />
           </div>
           
         </div>
-        <div tabIndex={0} role="button" className="btn btn-ghost btn-circle">
+        <div tabIndex={0} role="button" className="btn btn-ghost btn-circle" onClick={()=>{navigate("/redemption")}}>
           <div className="indicator">
           <PiHamburgerBold />
           </div>
           
         </div>
-        <div tabIndex={0} role="button" className="btn btn-ghost btn-circle">
+        <div tabIndex={0} role="button" className="btn btn-ghost btn-circle" onClick={()=>{navigate("/pomodoro")}}>
           <div className="indicator">
           <CiTimer />
           </div>
           
         </div>
-        <div tabIndex={0} role="button" className="btn btn-ghost btn-circle">
+        <div tabIndex={0} role="button" className="btn btn-ghost btn-circle" onClick={()=>{navigate("/leadership")}}>
           <div className="indicator">
   <FaTrophy />
           </div>
@@ -62,9 +64,13 @@ function Navbar() {
         <ul
           tabIndex={0}
           className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
-   
-           
-          <li><a>Login/Logout</a></li>
+            {/* <SignedIn> */}
+           <li onClick={()=>{navigate("/login")}}><a>Login</a></li>
+           {/* </SignedIn>
+          <Signedout> */}
+          <li onClick={()=>{navigate("/signup")}}><a>Signup</a></li>
+          {/* </Signedout>
+      */}
         </ul>
       </div>
     </div>
